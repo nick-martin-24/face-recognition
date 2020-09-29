@@ -6,12 +6,13 @@ import imutils
 import pickle
 import time
 import cv2
+
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-e", "--encodings", required=True, help="path to serialized db of facial encodings")
 ap.add_argument("-o", "--output", type=str, help="path to output video")
 ap.add_argument("-y", "--display", type=int, default=1, help="whether or not to display output frame to screen")
-ap.add_argument("-d", "--detection-method", type=str, default="cnn", help="face detection model to use: either `hog` or `cnn`")
+ap.add_argument("-d", "--detection-method", type=str, default="hog", help="face detection model to use: either `hog` or `cnn`")
 args = vars(ap.parse_args())
 
 # load the known faces and embeddings
@@ -29,7 +30,8 @@ time.sleep(2.0)
 while True:
     # grab the frame from the threaded video stream
     frame = vs.read()
-	
+    frame = cv2.flip(frame, 1)
+
     # convert the input frame from BGR to RGB then resize it to have
     # a width of 750px (to speedup processing)
     rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
