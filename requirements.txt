@@ -1,0 +1,13 @@
+scipy
+numpy==1.18.0
+matplotlib
+pandas
+statsmodels
+sklearn
+theano
+tensorflow
+keras
+imutils
+opencv-python
+dlib
+face_recognition
