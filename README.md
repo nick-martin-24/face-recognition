@@ -2,9 +2,8 @@
 
 Face Recognition
 ================
-training usage: python train_network.py --dataset images/train --model santa_not_santa  
-classification usage: python test_network.py --model santa_not_santa.model --image <path_to_image>
-<enter description here>
+encoding; python encode_faces.py --dataset <path_to_dataset> --encodings encodings.pickle
+recognize: python recognize_faces_image.py --encodings encodings.pickle --image <path_to_test_image>
 
 A Section
 =========
