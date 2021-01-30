@@ -9,8 +9,8 @@ pip install -r requirements.txt
 Usage
 ================
 encoding: python encode_faces.py --dataset <path_to_dataset> --encodings encodings.pickle  
-recognize image: python recognize_faces_image.py --encodings encodings.pickle --image <path_to_test_image> --detection-method hog  
-recognize video: python recognize_faces_video.py --encodings encodings.pickle --output output/webcam_face_recognition_output.avi --display 1 --detection-method hog  
+recognize image: python src/recognize_faces_image.py --encodings encodings.pickle --image <path_to_test_image> --detection-method hog  
+recognize video: python src/recognize_faces_video.py --encodings encodings.pickle --output output/webcam_face_recognition_output.avi --display 1 --detection-method hog  
 
 
 
